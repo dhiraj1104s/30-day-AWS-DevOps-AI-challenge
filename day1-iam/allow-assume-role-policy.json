@@ -1,0 +1,16 @@
+cat <<EOF > allow-assume-role-policy.json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": [
+                "arn:aws:iam::238841126042:role/DeveloperRole",
+                "arn:aws:iam::238841126042:role/OperationsRole",
+                "arn:aws:iam::238841126042:role/SecurityAuditRole"
+            ]
+        }
+    ]
+}
+EOF
